@@ -2,6 +2,10 @@ name: CI
 on:
   push:
     branches: [master]
+  pull_request:
+    types: [opened, reopened, synchronize]
+  pull_request_review_requested:
+  
 jobs:
   deploy:
     runs-on: self-hosted
